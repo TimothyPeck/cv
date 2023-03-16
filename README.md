@@ -1,6 +1,6 @@
 # CV
 
-Jeanne's CV
+Tim's CV
 
 ## Install the dependencies
 
