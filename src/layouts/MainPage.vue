@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import aboutMeVue from '../components/about-me.vue';
 import languageSwitcherVue from '../components/language-switcher.vue';
 import PortfolioComponent from 'src/components/PortfolioComponent.vue';
-import footerComponent from 'src/components/footer-component.vue';
 import FooterComponent from 'src/components/footer-component.vue';
 export default {
   setup() {
