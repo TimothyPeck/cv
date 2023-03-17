@@ -1,5 +1,5 @@
-<script setup>
-import { ref, defineExpose } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 const dob = new Date('1999-12-07');
 let today_date = new Date();
 let today_year = today_date.getFullYear();
@@ -16,38 +16,90 @@ if (dob.getMonth() - 1 == today_month && today_day < dob.getDay()) {
 }
 defineExpose({ age });
 </script>
-<!-- <script>
-// export default {
-//   name: 'AboutMe',
-//   methods: {
-//     getAge() {
-
-//       return age;
-//     },
-//   },
-//   setup() {
-//     const age = ref(getAge());
-//     return { age };
-//   },
-// };
-</script>-->
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'AboutMeComponent',
+  computed: {
+    layout() {
+      return this.$q.screen.gt.sm ? 'comfortable' : 'dense';
+    },
+  },
+});
+</script>
 <template>
   <div class="container">
     <h1 class="section-header">{{ $t('about_heading') }}</h1>
     <p class="about-para left-align">{{ $t('about_para1') }}</p>
 
     <h2 class="mini-header">{{ $t('personal_info') }}</h2>
-    <ul class="left-align">
-      <li>{{ $t('pob') }}</li>
-      <li>{{ $t('dob') }} - {{ age }} {{ $t('years') }}</li>
-      <li>{{ $t('location') }}</li>
-    </ul>
+    <div class="personal-container left-align">
+      <p>{{ $t('pob') }}</p>
+      <p>{{ $t('born') }}{{ $t('dob') }} - {{ age }} {{ $t('years') }}</p>
+      <p>{{ $t('location') }}</p>
+    </div>
     <h2 class="mini-header">{{ $t('language_skills') }}</h2>
     <ul class="left-align">
-      <li class="en">{{ $t('english_level') }}</li>
-      <li class="fr">{{ $t('french_level') }}</li>
-      <li class="de">{{ $t('german_level') }}</li>
+      <li class="en lang-list-item">{{ $t('english_level') }}</li>
+      <li class="fr lang-list-item">{{ $t('french_level') }}</li>
+      <li class="de lang-list-item">{{ $t('german_level') }}</li>
     </ul>
+
+    <h2 class="mini-header">{{ $t('education') }}</h2>
+    <q-timeline :layout="layout" class="centred">
+      <q-timeline-entry
+        :title="$t('batchelor')"
+        subtitle="2019 - 2023"
+        color="primary"
+        icon="school"
+        side="left"
+      >
+        <div>
+          <p>HE-Arc Ingénierie, Neuchâtel, CH</p>
+        </div>
+      </q-timeline-entry>
+      <q-timeline-entry
+        :title="$t('cfc')"
+        subtitle="2016 - 2019"
+        color="primary"
+        icon="school"
+        side="left"
+      >
+        <div>
+          <p>CPLN, Neuchâtel, CH</p>
+        </div>
+      </q-timeline-entry>
+    </q-timeline>
+    <h2 class="mini-header">{{ $t('technos') }}</h2>
+    <div class="centred">
+      <p>{{ $t('technos_babble') }}</p>
+      <div class="split-div">
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SQL</li>
+        </ul>
+        <ul>
+          <li>Java</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>Vue.js</li>
+          <li>Quasar</li>
+          <li>Qt</li>
+        </ul>
+        <ul>
+          <li>OpenCV</li>
+          <li>Git</li>
+          <li>Django</li>
+          <li>Laravel</li>
+          <li>Unity</li>
+          <li>Blender</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 <style>
@@ -59,10 +111,16 @@ defineExpose({ age });
   flex-direction: column;
 }
 
+.centred {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-header {
   font-size: 3rem;
   font-family: sans-serif;
-  width: 50%;
+  width: 100%;
   border-bottom: 3px solid lightblue;
 }
 
@@ -70,7 +128,14 @@ defineExpose({ age });
   flex-wrap: wrap;
   align-items: flex-start;
   justify-items: flex-start;
-  width: 50%;
+  width: 100%;
+}
+
+.personal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .about-para {
@@ -78,7 +143,7 @@ defineExpose({ age });
   font-family: sans-serif;
 }
 
-li {
+.lang-list-item {
   display: flex;
   align-items: center;
   margin: 10px 0;
@@ -88,7 +153,14 @@ li {
   list-style: none;
 }
 
-li::before {
+.split-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lang-list-item::before {
   display: block;
   flex-shrink: 0;
   width: 33px;
@@ -113,7 +185,16 @@ li::before {
 .mini-header {
   font-size: 1.5rem;
   font-family: sans-serif;
-  width: 50%;
+  width: 100%;
   border-bottom: 3px solid lightblue;
+}
+
+@media screen and (min-width: 1024px) {
+  .mini-header,
+  .left-align,
+  .section-header,
+  .centred {
+    width: 50%;
+  }
 }
 </style>

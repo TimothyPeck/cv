@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import aboutMeVue from '../components/about-me.vue';
 import languageSwitcherVue from '../components/language-switcher.vue';
-
+import PortfolioComponent from 'src/components/PortfolioComponent.vue';
 export default {
   setup() {
     const rightDrawerOpen = ref(false);
@@ -13,7 +13,7 @@ export default {
       },
     };
   },
-  components: { aboutMeVue, languageSwitcherVue },
+  components: { aboutMeVue, languageSwitcherVue, PortfolioComponent },
 };
 </script>
 <template>
@@ -35,6 +35,7 @@ export default {
       :breakpoint="400"
       side="right"
       bordered
+      overlay
     >
       <q-scroll-area
         style="
@@ -94,6 +95,7 @@ export default {
 
     <q-page-container>
       <aboutMeVue />
+      <PortfolioComponent />
     </q-page-container>
   </q-layout>
 </template>
