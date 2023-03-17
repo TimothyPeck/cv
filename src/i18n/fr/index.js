@@ -2,6 +2,7 @@ export default {
   page_not_found: 'Page non trouvée',
   about_heading: 'À propos de moi',
   about_para1: 'Je suis actuellement un étudiant de troisième année d\'informatique logicielle à la He-ARC.',
+  interests: 'En dehors de l\'informatique, j\'aime les jeux vidéo, la guitare, la lecture, l\'exploration, la cuisine et le motosport.',
   language_skills: 'Capacités linguistiques',
   french_level: 'Bilingue',
   english_level: 'Langue maternelle; C1 mention C2',
@@ -10,7 +11,7 @@ export default {
   born: 'Né le ',
   dob: '07.12.1999',
   years: 'ans',
-  pob: 'Lieu de naissance: Braine-l\'Alleud, Belgique',
+  pob: 'Lieu de naissance: Braine-l\'Alleud / Waterloo, Belgique',
   location: 'Domicile: Thielle, Neuchâtel, Suisse',
   education: 'Formation',
   batchelor: 'Bachelor en Informatique et Systèmes de communication',
@@ -22,4 +23,5 @@ export default {
   rattus_description: 'Rattus est un jeu d\'évasion 3D en unity. Le joueur doit trouver un moyen de s\'échapper de l\'asile en résolvant des énigmes et en trouvant des clés.',
   tort_description: 'Torterraria est un jeu 2D en unity inspiré de Terraria et de Pokemon. Le joueur doit explorer le monde, combattre des monstres et collecter des objets.',
   assistant_description: 'The-ASSistant est une application web qui permet de visualiser les statistiques des Pokemon et de comparer les Pokemon pour voir comment leurs types interagissent.',
+  language: 'Langue',
 }

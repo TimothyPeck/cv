@@ -31,6 +31,7 @@ export default defineComponent({
   <div class="container">
     <h1 class="section-header">{{ $t('about_heading') }}</h1>
     <p class="about-para left-align">{{ $t('about_para1') }}</p>
+    <p class="about-para left-align">{{ $t('interests') }}</p>
 
     <h2 class="mini-header">{{ $t('personal_info') }}</h2>
     <div class="personal-container left-align">

@@ -1,17 +1,18 @@
 <template>
-  <!-- ...... -->
   <q-select
+    class="lang-select"
     v-model="locale"
     :options="localeOptions"
-    label="Quasar Language"
+    :label="$t('language')"
+    filled
     dense
-    borderless
+    bg-color="teal-3"
     emit-value
     map-options
     options-dense
+    square
     style="min-width: 150px"
   />
-  <!-- ...... -->
 </template>
 
 <script>

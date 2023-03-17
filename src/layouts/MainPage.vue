@@ -3,6 +3,8 @@ import { ref } from 'vue';
 import aboutMeVue from '../components/about-me.vue';
 import languageSwitcherVue from '../components/language-switcher.vue';
 import PortfolioComponent from 'src/components/PortfolioComponent.vue';
+import footerComponent from 'src/components/footer-component.vue';
+import FooterComponent from 'src/components/footer-component.vue';
 export default {
   setup() {
     const rightDrawerOpen = ref(false);
@@ -13,7 +15,12 @@ export default {
       },
     };
   },
-  components: { aboutMeVue, languageSwitcherVue, PortfolioComponent },
+  components: {
+    aboutMeVue,
+    languageSwitcherVue,
+    PortfolioComponent,
+    FooterComponent,
+  },
 };
 </script>
 <template>
@@ -96,6 +103,7 @@ export default {
     <q-page-container>
       <aboutMeVue />
       <PortfolioComponent />
+      <FooterComponent />
     </q-page-container>
   </q-layout>
 </template>
@@ -109,6 +117,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 0% 0%;
 }
 
 .LI-simple-link {
