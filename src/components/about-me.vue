@@ -5,7 +5,7 @@ let today_date = new Date();
 let today_year = today_date.getFullYear();
 let today_month = today_date.getMonth();
 let today_day = today_date.getDate();
-let age = ref(null);
+let age = ref(0);
 age.value = today_year - dob.getFullYear();
 
 if (today_month < dob.getMonth() - 1) {
