@@ -10,7 +10,12 @@
             target="_blank"
             class="portfolio-link"
           >
-            <h3>Rattus</h3>
+            <h3>
+              Rattus<q-icon
+                class="project-link-icon"
+                name="fa-brands fa-github"
+              ></q-icon>
+            </h3>
           </a>
         </q-card-section>
         <q-card-section>
@@ -27,7 +32,12 @@
             target="_blank"
             class="portfolio-link"
           >
-            <h3>Torterraria</h3>
+            <h3>
+              Torterraria<q-icon
+                class="project-link-icon"
+                name="fa-brands fa-github"
+              ></q-icon>
+            </h3>
           </a>
         </q-card-section>
         <q-card-section>
@@ -44,7 +54,12 @@
             target="_blank"
             class="portfolio-link"
           >
-            <h3>The-ASSistant</h3>
+            <h3>
+              The-ASSistant<q-icon
+                class="project-link-icon"
+                name="fa-brands fa-github"
+              ></q-icon>
+            </h3>
           </a>
         </q-card-section>
         <q-card-section>
@@ -61,7 +76,13 @@
             target="_blank"
             class="portfolio-link"
           >
-            <h3>FirstPass</h3>
+            <h3>
+              FirstPass
+              <q-icon
+                class="project-link-icon"
+                name="fa-brands fa-github"
+              ></q-icon>
+            </h3>
           </a>
         </q-card-section>
         <q-card-section>
@@ -75,48 +96,6 @@
   </div>
 </template>
 <style>
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.centred {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-header {
-  font-size: 3rem;
-  font-family: sans-serif;
-  width: 100%;
-  border-bottom: 3px solid lightblue;
-}
-
-.left-align {
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-items: flex-start;
-  width: 100%;
-}
-
-.split-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.mini-header {
-  font-size: 1.5rem;
-  font-family: sans-serif;
-  width: 100%;
-  border-bottom: 3px solid lightblue;
-}
-
 .tech-container {
   flex-direction: column;
   min-width: 100%;
@@ -135,6 +114,11 @@
 h3 {
   font-size: 2.1rem;
   margin: 0;
+}
+
+.project-link-icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {

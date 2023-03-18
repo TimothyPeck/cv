@@ -25,8 +25,8 @@ export default {
     return {
       locale,
       localeOptions: [
+        { value: 'fr', label: 'Français' },
         { value: 'en-UK', label: 'English' },
-        { value: 'fr', label: 'French' },
       ],
     };
   },

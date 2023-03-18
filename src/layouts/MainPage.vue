@@ -24,7 +24,7 @@ export default {
 </script>
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header reveal elevated class="bg-primary text-white">
+    <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-toolbar-title> Timothy Roy Peck </q-toolbar-title>
 

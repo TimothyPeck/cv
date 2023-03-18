@@ -7,31 +7,51 @@ export default defineComponent({
 </script>
 <template>
   <q-footer>
-    <q-toolbar>
+    <q-toolbar class="footer">
       <q-toolbar-title>
         <q-btn
           flat
-          label="Github"
           icon="fab fa-github"
           href="https://github.com/TimothyPeck/"
           target="_blank"
         />
         <q-btn
           flat
-          label="LinkedIn"
           icon="fab fa-linkedin"
           href="https://www.linkedin.com/in/timothy-peck/"
           target="_blank"
         />
-        <q-btn
-          flat
-          label="Email"
-          icon="fas fa-envelope"
-          href="mailto:t.r.peck@hotmail.com"
-          target="_blank"
-        />
+        <q-btn flat icon="fas fa-envelope" href="mailto:t.r.peck@hotmail.com" />
       </q-toolbar-title>
-      <p>{{ $t('thanks') }}</p>
+      <q-space></q-space>
+      <div>
+        {{ $t('thanks')
+        }}<a
+          href="https://jeanne-michel.vercel.app"
+          target="_blank"
+          class="thanks-link"
+          >Jeanne</a
+        >{{ $t('thanks_cont') }}
+      </div>
     </q-toolbar>
   </q-footer>
 </template>
+<style>
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thanks-link {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+</style>

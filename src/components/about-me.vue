@@ -74,7 +74,7 @@ export default defineComponent({
     <h2 class="mini-header">{{ $t('technos') }}</h2>
     <div class="centred">
       <p>{{ $t('technos_babble') }}</p>
-      <div class="split-div">
+      <div class="split-div technos-div">
         <ul>
           <li>Python</li>
           <li>JavaScript</li>
@@ -161,6 +161,21 @@ export default defineComponent({
   width: 100%;
 }
 
+.technos-div {
+  width: 100%;
+  justify-content: space-around;
+  padding: 0.2rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.technos-div > ul {
+  width: 30%;
+  padding: 0.2rem;
+  margin-left: 1.2rem;
+  padding-left: 0;
+}
+
 .lang-list-item::before {
   display: block;
   flex-shrink: 0;
@@ -169,6 +184,7 @@ export default defineComponent({
   margin-right: 10px;
   background-size: contain;
   content: '';
+  font-size: 2rem;
 }
 
 .en::before {
@@ -187,7 +203,7 @@ export default defineComponent({
   font-size: 1.5rem;
   font-family: sans-serif;
   width: 100%;
-  border-bottom: 3px solid lightblue;
+  border-bottom: 1px solid lightblue;
 }
 
 @media screen and (min-width: 1024px) {
