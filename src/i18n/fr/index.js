@@ -2,7 +2,7 @@ export default {
   page_not_found: 'Page non trouvée',
   about_heading: 'À propos de moi',
   about_para1: 'Je suis actuellement un étudiant de troisième année d\'informatique logicielle à la He-ARC.',
-  interests: 'En dehors de l\'informatique, j\'aime les jeux vidéo, la guitare, la lecture, l\'exploration, la cuisine et le motosport.',
+  interests: 'En dehors de l\'informatique, j\'aime les jeux vidéo, la guitare, la lecture, la cuisine et le motosport.',
   language_skills: 'Capacités linguistiques',
   french_level: 'Bilingue',
   english_level: 'Langue maternelle; Cambridge C1 mention C2',
