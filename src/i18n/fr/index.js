@@ -24,5 +24,6 @@ export default {
   rattus_description: 'Rattus est un jeu d\'évasion 3D en unity. Le joueur doit trouver un moyen de s\'échapper de l\'asile en résolvant des énigmes et en trouvant des clés.',
   tort_description: 'Torterraria est un jeu 2D en unity inspiré de Terraria et de Pokemon. Le joueur doit explorer le monde, combattre des monstres et collecter des objets.',
   assistant_description: 'The-ASSistant est une application web qui permet de visualiser les statistiques des Pokemon et de comparer les Pokemon pour voir comment leurs types interagissent.',
+  firstpass_description: 'FirstPass est une application web qui permet de stocker des mots de passe dans un coffre-fort et les partager avec d\'autres utilisateurs a choix.',
   language: 'Langue',
 }

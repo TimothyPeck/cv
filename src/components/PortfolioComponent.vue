@@ -87,7 +87,7 @@
         </q-card-section>
         <q-card-section>
           <div>
-            <p>{{ $t('assistant_description') }}</p>
+            <p>{{ $t('firstpass_description') }}</p>
             <p>Technologies: Django, Vue, JavaScript, CSS</p>
           </div>
         </q-card-section>
